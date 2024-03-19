@@ -15,6 +15,10 @@ export class SearchComponent {
     this.searchTextChanged.emit(this.searchText)
   }
 
- 
+  updateSearchText(inputEl: HTMLInputElement){
+   // console.log(inputEl.value)
+    this.searchText=inputEl.value
+    this.searchTextChanged.emit(this.searchText)
+  }
 
 }
