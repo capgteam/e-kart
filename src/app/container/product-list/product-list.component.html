@@ -3,7 +3,7 @@
     [total_in_stock]="total_in_stock"
     [total_out_of_stock]="total_out_of_stock" 
     (onSlectedfRadioButton)="onFilterChange($event)"></app-filter>
-    <div *ngFor="let prod of product" >
+    <div *ngFor="let prod of product" (click)="selectedProduct=prod">
     <app-product  [product]="prod" *ngIf="prod.name.toLowerCase().includes(searchText)" ></app-product>
 
     <!-- *ngIf="selectedRadioButton==='all' || 

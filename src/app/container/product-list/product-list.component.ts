@@ -1,4 +1,5 @@
 import { Component,OnInit,Input } from '@angular/core';
+import { Product } from 'src/app/Model/Product';
 
 @Component({
   selector: 'product-list',
@@ -10,6 +11,9 @@ totalStock:number =0
 total_in_stock:number=0
 total_out_of_stock:number=0
 selectedRadioButton:string='all'
+
+
+selectedProduct:Product
 
 @Input()
 searchText:string=''
